@@ -1,42 +1,51 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Global Scrollbar Styling */
+* {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #af1740 #740938; /* Firefox: thumb color #AF1740, track color #740938 */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Webkit browsers (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+  width: 8px; /* Thin scrollbar width */
+  height: 8px; /* Horizontal scrollbar height */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+*::-webkit-scrollbar-track {
+  background-color: #740938; /* deepMaroon */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #af1740; /* mediumRed */
+  border-radius: 4px;
+  border: 2px solid #740938; /* deepMaroon track */
 }
 
-.card {
-  padding: 2em;
+/* Hover effect for thumb */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #de7c7d; /* lightRed on hover */
 }
 
-.read-the-docs {
-  color: #888;
+/* Scoped Scrollbar Styling */
+.scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: #af1740 #740938;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background-color: #740938;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #af1740;
+  border-radius: 4px;
+  border: 2px solid #740938;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: #de7c7d;
 }
