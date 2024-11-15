@@ -1,7 +1,6 @@
 // src/components/CodeEditor.tsx
 import React from "react";
 import MonacoEditor from "@monaco-editor/react";
-import { useCodeExecution } from "../hooks/useCodeExecution";
 
 interface CodeEditorProps {
   language: string;
