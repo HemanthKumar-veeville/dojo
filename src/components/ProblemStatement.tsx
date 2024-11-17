@@ -1,9 +1,23 @@
-// src/components/ProblemStatement.tsx
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProblemStatement: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1); // Navigate back to the previous page
+  };
+
   return (
     <div className="min-h-screen w-full p-8 bg-deepMaroon text-white overflow-y-auto scrollable">
+      {/* Back Button */}
+      <button
+        onClick={handleBack}
+        className="mb-4 bg-mediumRed hover:bg-lightRed text-white font-bold py-2 px-4 rounded"
+      >
+        Back
+      </button>
+
       {/* Problem Section */}
       <h2 className="text-2xl font-bold mb-4">Problem</h2>
       <p className="mb-4 leading-relaxed">

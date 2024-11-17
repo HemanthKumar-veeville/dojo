@@ -1,16 +1,17 @@
-// src/App.tsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import TestEnvironmentPage from "./pages/TestEnvironmentPage";
 import EditorPage from "./pages/EditorPage";
-import QuestionPreviewPage from "./pages/QuestionPreviewPage";
+// import AdminDashboardPage from "./pages/";
 import "./App.css";
 
 const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<QuestionPreviewPage />} />
+        <Route path="/" element={<TestEnvironmentPage />} />
         <Route path="/editor" element={<EditorPage />} />
+        {/* <Route path="/admin-dashboard" element={<AdminDashboardPage />} /> */}
       </Routes>
     </Router>
   );
